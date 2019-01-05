@@ -42,3 +42,34 @@ function warnUser(): void {
 // Null and Undefined
 let u: undefined = undefined;
 let n: null = null;
+
+
+/*** Variable Declarations ***/
+
+function f(input: boolean) {
+    let a = 100;
+    
+    if (input) {
+        // Still okay to reference 'a'
+        let b = a + 1;
+        return b;
+    }
+
+    // Error: 'b' doesn't exist here
+    return b;
+}
+
+function f(condition, x) {
+    if (condition) {
+        let x = 100;
+        return x;
+    }
+
+    return x;
+}
+
+f(false, 0); // returns '0'
+f(true, 0);  // returns '100'
+
+
+

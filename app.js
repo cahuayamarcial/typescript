@@ -39,3 +39,23 @@ function warnUser() {
 // Null and Undefined
 var u = undefined;
 var n = null;
+/*** Variable Declarations ***/
+function f(input) {
+    var a = 100;
+    if (input) {
+        // Still okay to reference 'a'
+        var b = a + 1;
+        return b;
+    }
+    // Error: 'b' doesn't exist here
+    return b;
+}
+function f(condition, x) {
+    if (condition) {
+        var x_1 = 100;
+        return x_1;
+    }
+    return x;
+}
+f(false, 0); // returns '0'
+f(true, 0); // returns '100'
