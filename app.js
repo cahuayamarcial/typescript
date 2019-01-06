@@ -166,3 +166,15 @@ myPromise.then(function () {
 }, function () {
     console.log("La operación de la promesa a finalizado con error");
 });
+/*** Objects typescript ***/
+var Person = /** @class */ (function () {
+    function Person(km) {
+        this.km = km;
+    }
+    Person.prototype.walk = function () {
+        console.log("I'm walking " + this.km + " km.");
+    };
+    return Person;
+}());
+var personObject = new Person(1000);
+personObject.walk();
