@@ -154,4 +154,15 @@ for (let s of strings) {
 }
 
 
+/*** Promise ***/
 
+let myPromise = new Promise( function(resolved: any, reject: any){
+    // resolved();
+    reject();
+});
+
+myPromise.then(function() {
+    console.log("La operación de la promesa a finalizado con exito");
+}, function() {
+    console.log("La operación de la promesa a finalizado con error");
+})

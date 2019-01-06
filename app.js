@@ -156,3 +156,13 @@ for (var _i = 0, strings_1 = strings; _i < strings_1.length; _i++) {
         console.log("\"" + s + "\" - " + (validators[name_1].isAcceptable(s) ? "matches" : "does not match") + " " + name_1);
     }
 }
+/*** Promise ***/
+var myPromise = new Promise(function (resolved, reject) {
+    // resolved();
+    reject();
+});
+myPromise.then(function () {
+    console.log("La operación de la promesa a finalizado con exito");
+}, function () {
+    console.log("La operación de la promesa a finalizado con error");
+});
